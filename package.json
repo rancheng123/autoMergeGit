@@ -1,9 +1,16 @@
 {
-  "name": "mydreamplusbusiness",
+  "name": "git-merge-tool",
   "version": "1.0.0",
+  "author": "rancheng",
   "devDependencies": {
     "chalk": "^2.4.2"
   },
   "dependencies": {},
-  "scripts": {}
+  "scripts": {},
+  "files": [
+    "./lib",
+    "./projects",
+    ".gitignore",
+    "./package.json"
+  ]
 }
