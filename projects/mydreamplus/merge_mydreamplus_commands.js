@@ -1,7 +1,7 @@
 
-var CommandExecer = require('./commandExecer');
+var CommandExecer = require('../../lib/commandExecer');
 
-function merge(opts){
+function merge_lanhu_commands(opts){
 
 
     var remote_origin_branch = 'origin/' + opts.origin_branch;
@@ -29,7 +29,7 @@ function merge(opts){
         },
         {
             //合并源分支 到当前分支
-            command: 'git merge ' + remote_origin_branch,
+            command: 'git merge_lanhu_commands ' + remote_origin_branch,
             msg: '合并 '+remote_origin_branch + ' 到 当前分支' +opts.target_branch
         },
         {
@@ -65,14 +65,14 @@ function merge(opts){
     ]
 
     new CommandExecer({
-        commandList: commandList,
+        commandList,
         workPlace: opts.workPlace
     }).start()
 }
 
 
 
-module.exports = merge
+module.exports = merge_lanhu_commands
 
 
 

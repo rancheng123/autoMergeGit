@@ -1,4 +1,4 @@
-var merge = require('./lib/merge');
+var merge = require('./merge_mydreamplus_commands');
 
 merge({
     //源分支
