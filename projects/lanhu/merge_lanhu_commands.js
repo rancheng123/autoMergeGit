@@ -1,4 +1,8 @@
 
+
+
+
+
 var CommandExecer = require('../../lib/commandExecer');
 
 function merge_lanhu_commands(opts){
@@ -8,13 +12,16 @@ function merge_lanhu_commands(opts){
     var remote_target_branch = 'origin/' + opts.target_branch;
 
     var tagCommand = []
-    //线上环境，打tag
-    if(opts.target_branch == 'master'){
+    if(opts.tag){
 
         var tagCommand = [
             {
                 // tag
                 command: "git tag -a "+ opts.tag.version +" -m '"+ opts.tag.msg +"'"
+            },
+            {
+                // tag
+                command: "git push origin "+ opts.tag.version
             }
 
 
@@ -28,6 +35,8 @@ function merge_lanhu_commands(opts){
             command: 'git fetch',
             msg: ' 更新资源'
         },
+
+
 
 
         //将他人代码  合到 自己的分支
@@ -55,12 +64,12 @@ function merge_lanhu_commands(opts){
             msg: '合并 '+opts.origin_branch + ' 到' +opts.target_branch
         },
 
-        ...tagCommand,
-
         {
             command: 'git push',
             msg: 'push 到' + remote_target_branch
         },
+
+        ...tagCommand,
 
 
         //切回自己的分支

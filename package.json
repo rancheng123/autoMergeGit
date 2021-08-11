@@ -1,16 +1,10 @@
 {
   "name": "git-merge-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "rancheng",
   "devDependencies": {
     "chalk": "^2.4.2"
   },
   "dependencies": {},
-  "scripts": {},
-  "files": [
-    "./lib",
-    "./projects",
-    ".gitignore",
-    "./package.json"
-  ]
+  "scripts": {}
 }
