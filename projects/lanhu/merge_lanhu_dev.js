@@ -7,8 +7,8 @@ merge({
     target_branch: 'develop',
     //工作目录
     workPlace: '/Users/apple/workPlace/lanhu-ea-v2el-web',
-    tag: {
-        version: 'v0.8.1',
-        msg: 'release v0.8.1'
+     tag: {
+        version: 'v0.8.20',
+        msg: 'release v0.8.20'
     }
 })
